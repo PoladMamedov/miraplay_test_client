@@ -1,0 +1,34 @@
+
+###
+
+POST https://miraplay-test-server-mu.vercel.app/register 
+Content-Type: application/json
+
+{
+"email": "Kyle@da.sd", 
+"name": "Kyle", 
+"password": "password"
+}
+
+###
+
+POST https://miraplay-test-server-mu.vercel.app/login 
+Content-Type: application/json
+
+{
+"email": "Kyle@da.sd", 
+"name": "Kyle", 
+"password": "password"
+}
+
+###
+
+POST https://api.miraplay.cloud/games/by_page
+Content-Type: application/json
+
+{
+  "gamesToShow": 9,
+  "genre": "MOBA",
+  "isFreshGamesFirst": true,
+  "page": 1,
+}

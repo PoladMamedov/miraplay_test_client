@@ -1,0 +1,34 @@
+.games-header {
+  background-color: #1d1d1d;
+  height: 90px;
+}
+.games-header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.games-header-title {
+  font-size: 26px;
+}
+.games-header-logout-btn {
+  background: $secondary;
+  background-position: 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(63, 156, 20, 0.3);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 143%;
+  transition: all 0.2s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  padding: 10px;
+  &:hover {
+    border: none;
+    box-shadow: 0 0 45px rgba(63, 156, 20, 0.3);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+}
