@@ -1,26 +1,37 @@
-.genre-options {
+.options-container {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+.options-select {
+  position: relative;
+  width: 160px;
+}
+.options-select-btn {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: #242424;
+  border: 1px solid #454545;
+  border-radius: 10px;
+  color: $primaryText;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  height: 46px;
+  justify-content: center;
+  line-height: 143%;
+  padding: 0 25px;
+  text-transform: uppercase;
+  width: 100%;
+  &.active {
+    background-color: $secondary;
+  }
+}
+.options {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 25px;
-  li {
-    display: flex;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    background: #242424;
-    border: 1px solid #454545;
-    border-radius: 10px;
-    color: $primaryText;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 800;
-    height: 46px;
-    justify-content: center;
-    line-height: 143%;
-    padding: 0 25px;
-    text-transform: uppercase;
-  }
-  li.active {
-    background-color: $secondary;
-  }
+  position: absolute;
+  margin-top: 10px;
 }
