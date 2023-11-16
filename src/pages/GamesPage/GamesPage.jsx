@@ -23,8 +23,6 @@ const genres = [
 
 function GamesPage() {
   const dispatch = useDispatch();
-  const games = useSelector((state) => state.games.games);
-  const gamesListLength = useSelector((state) => state.games.gamesListLength);
 
   const [genreSelectOpen, setGenreSelectOpen] = useState(false);
   const [freshnessSelectOpen, setfreshnessSelectOpen] = useState(false);
@@ -41,6 +39,9 @@ function GamesPage() {
       dispatch(setGames(data));
     },
   });
+
+  const games = useSelector((state) => state.games.games);
+  const gamesListLength = useSelector((state) => state.games.gamesListLength);
 
   useEffect(() => {
     gamesMutation.mutate({ genre, page, newFirst });
@@ -97,7 +98,7 @@ function GamesPage() {
         <div className="container">
           <GamesList />
         </div>
-        {games.length === gamesListLength ? null : (
+        {games?.length === gamesListLength ? null : (
           <button className="more-games-btn" onClick={() => setPage((prevPage) => prevPage + 1)}>
             MORE
           </button>
