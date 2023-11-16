@@ -7,7 +7,7 @@
   position: relative;
   width: 160px;
 }
-.options-select-btn {
+.options-select__btn {
   display: flex;
   align-items: center;
   backdrop-filter: blur(10px);
@@ -24,7 +24,11 @@
   padding: 0 25px;
   text-transform: uppercase;
   width: 100%;
+  transition: all 0.2s ease;
   &.active {
+    background-color: $secondary;
+  }
+  &:hover {
     background-color: $secondary;
   }
 }
@@ -34,4 +38,25 @@
   gap: 10px;
   position: absolute;
   margin-top: 10px;
+  z-index: 1;
+}
+.more-games-btn {
+  background-color: #242424;
+  border: 1px solid #454545;
+  border-radius: 20px;
+  color: $primaryText;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  height: 78px;
+  line-height: 143%;
+  margin: 41px auto 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  width: 300px;
+  &:hover {
+    background-color: $secondary;
+  }
 }

@@ -34,7 +34,7 @@ function RegisterForm() {
 
   return (
     <>
-      <form className="log-in-form" onSubmit={formik.handleSubmit}>
+      <form className="auth-form" onSubmit={formik.handleSubmit}>
         <div className="input-wrapper">
           <label>Name:</label>
           {formik.errors.name && formik.touched.name ? (
@@ -80,7 +80,7 @@ function RegisterForm() {
             onChange={formik.handleChange}
           />
         </div>
-        <button type="submit" className="form-button log-in-form-btn">
+        <button type="submit" className="form-button auth-form-btn">
           REGISTER
         </button>
         {user?.success && <p className="form-success-message">User created succesfully, now you can login!</p>}

@@ -6,12 +6,10 @@ import Loader from "../Loader/Loader";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/slices/userSlice";
-import { useNavigate } from "react-router-dom";
 
 function LogInForm() {
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const loginUserMutation = useMutation({
     mutationFn: (user) => logInUser(user),
@@ -19,9 +17,9 @@ function LogInForm() {
     onSuccess: (data) => {
       if (!data.error) {
         dispatch(addUser(data));
-        navigate("/games");
+        return;
       }
-      if (data.error) setError(data.error);
+      setError(data.error);
     },
   });
 
@@ -41,7 +39,7 @@ function LogInForm() {
 
   return (
     <>
-      <form className="log-in-form" onSubmit={formik.handleSubmit}>
+      <form className="auth-form" onSubmit={formik.handleSubmit}>
         <div className="input-wrapper">
           <label>Email:</label>
           {formik.errors.email && formik.touched.email ? (
@@ -72,7 +70,7 @@ function LogInForm() {
             onChange={formik.handleChange}
           />
         </div>
-        <button type="submit" className="form-button log-in-form-btn">
+        <button type="submit" className="form-button auth-form-btn">
           LOG IN
         </button>
         {error && <p className="form-error-message">{error}</p>}

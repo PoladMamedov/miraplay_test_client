@@ -33,7 +33,7 @@
   color: $primaryText;
   border-bottom: 1px solid;
 }
-.log-in-form {
+.auth-form {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -43,24 +43,24 @@
   min-height: 500px;
 }
 @media screen and (min-width: 600px) {
-  .log-in-form,
+  .auth-form,
   .form-change-btns {
     width: 70%;
   }
 }
 @media screen and (min-width: 800px) {
-  .log-in-form,
+  .auth-form,
   .form-change-btns {
     width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  .log-in-form,
+  .auth-form,
   .form-change-btns {
     width: 100%;
   }
 }
-.log-in-form-btn {
+.auth-form-btn {
   width: 100%;
 }
 .forms-title {

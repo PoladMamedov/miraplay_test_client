@@ -7,13 +7,8 @@ function Header() {
   return (
     <header className="games-header">
       <div className="container games-header-container">
-        <h3 className="games-header-title">Welcome {name}!</h3>
-        <button
-          className="games-header-logout-btn"
-          onClick={() => {
-            dispatch(removeUser());
-          }}
-        >
+        <h1 className="games-header__title">Welcome {name}!</h1>
+        <button className="games-header__logout-btn" onClick={() => dispatch(removeUser())}>
           LOG OUT
         </button>
       </div>
