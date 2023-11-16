@@ -84,13 +84,12 @@ function GamesPage() {
               <ul
                 className="options"
                 onClick={() => {
-                  setNewFirst((prev) => !prev);
                   setfreshnessSelectOpen(false);
                   setGenreSelectOpen(false);
                 }}
               >
-                <li className={newFirst ? "options-select__btn active" : "options-select__btn"}>New first</li>
-                <li className={newFirst ? "options-select__btn" : "options-select__btn active"}>Old first</li>
+                <li onClick={() => setNewFirst(true)} className={newFirst ? "options-select__btn active" : "options-select__btn"}>New first</li>
+                <li onClick={() => setNewFirst(false)} className={newFirst ? "options-select__btn" : "options-select__btn active"}>Old first</li>
               </ul>
             ) : null}
           </div>
