@@ -60,7 +60,10 @@ function GamesPage() {
               <ul
                 className="options"
                 onClick={(e) => {
-                  if (genre === e.target.innerText || e.target.tagName !== "LI") return;
+                  if (genre === e.target.innerText || e.target.tagName !== "LI") {
+                    setGenreSelectOpen(false);
+                    return;
+                  }
                   setGenre(e.target.innerText);
                   setGenreSelectOpen(false);
                   setfreshnessSelectOpen(false);
@@ -88,8 +91,18 @@ function GamesPage() {
                   setGenreSelectOpen(false);
                 }}
               >
-                <li onClick={() => setNewFirst(true)} className={newFirst ? "options-select__btn active" : "options-select__btn"}>New first</li>
-                <li onClick={() => setNewFirst(false)} className={newFirst ? "options-select__btn" : "options-select__btn active"}>Old first</li>
+                <li
+                  onClick={() => setNewFirst(true)}
+                  className={newFirst ? "options-select__btn active" : "options-select__btn"}
+                >
+                  New first
+                </li>
+                <li
+                  onClick={() => setNewFirst(false)}
+                  className={newFirst ? "options-select__btn" : "options-select__btn active"}
+                >
+                  Old first
+                </li>
               </ul>
             ) : null}
           </div>
